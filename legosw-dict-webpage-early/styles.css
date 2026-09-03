@@ -1,0 +1,87 @@
+/* General page styling */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #222;
+}
+
+/* Main page container */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Header styling */
+header {
+    background-color: #111;
+    color: #ffd500;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Navigation links */
+nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 12px;
+    color: #1d5fd1;
+    font-weight: bold;
+}
+
+/* Character image */
+.character-image {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    margin: 20px auto;
+    border: 4px solid #ffd500;
+    border-radius: 10px;
+}
+
+/* Each paragraph is intentionally styled differently */
+.paragraph-one {
+    font-family: Georgia, serif;
+    color: #1b4f9c;
+    font-size: 18px;
+}
+
+.paragraph-two {
+    font-family: "Courier New", monospace;
+    color: #7a1b1b;
+    font-size: 17px;
+    background-color: #f7f7f7;
+    padding: 12px;
+}
+
+.paragraph-three {
+    font-family: Verdana, sans-serif;
+    color: #2f6b2f;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffd500;
+}
