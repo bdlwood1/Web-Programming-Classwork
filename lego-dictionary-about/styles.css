@@ -1,0 +1,55 @@
+/*
+    This is the color palette I chose for my LEGO Star Wars Character Dictionary.
+    I chose white and black to keep the website simple and easy to read.
+    I also chose dark red because it fits the Star Wars theme and stands out
+    against the white background.
+
+    Color Palette:
+    White: #FFFFFF
+    Black: #111111
+    Dark Red: #A6192E
+    Light Gray: #D9D9D9
+
+    Fonts:
+    Arial
+    Georgia
+*/
+
+/* This sets the background color, text color, and main font for the entire About page */
+body {
+    background-color: #FFFFFF;
+    color: #111111;
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+/* This changes the header to dark red so that it stands out from the rest of the page */
+header {
+    color: #A6192E;
+}
+
+/* This changes the paragraphs to Georgia and adds more space between each line to make them easier to read */
+p {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+/* This makes the links dark red so that they are easy to see against the white background */
+a {
+    color: #A6192E;
+}
+
+/* This separates the contact section at the bottom from the main information above it */
+footer {
+    border-top: 1px solid #D9D9D9;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+/* This controls the size of the LEGO Star Wars image and places it on the top right side of the page */
+img {
+    width: 225px;
+    max-width: 30%;
+    float: right;
+    margin: 0 0 20px 30px;
+}
