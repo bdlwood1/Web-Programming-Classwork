@@ -1,7 +1,6 @@
 /*
     This is the color palette I chose for my LEGO Star Wars Character Dictionary.
-    I chose a light nude color for the background because it gives the website
-    a softer look while still keeping the text easy to read.
+    I chose a light nude background with black text and dark red accents.
 
     Color Palette:
     Light Nude: #F3E8DD
@@ -15,17 +14,18 @@
     Impact
 */
 
-/* This sets the background color, text color, and main font for the entire About page */
+/* This styles the entire page and removes the browser's default margin */
 body {
     background-color: #F3E8DD;
     color: #111111;
     font-family: Arial, sans-serif;
-    margin: 40px;
+    margin: 0;
 }
 
-/* This changes the header to dark red so that it stands out from the rest of the page */
+/* This gives the header spacing and uses dark red for the headings */
 header {
     color: #8B1E2D;
+    padding: 30px 40px 20px 40px;
 }
 
 /* This gives the main website title a bold Star Wars-inspired appearance */
@@ -34,30 +34,99 @@ header h1 {
     font-size: 36px;
     letter-spacing: 3px;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-/* This changes the paragraphs to Georgia and adds more space between each line */
-p {
+/* This uses Flexbox to arrange the navigation links in a row */
+nav {
+    display: flex;
+    gap: 30px;
+    padding: 15px 40px;
+    background-color: #111111;
+}
+
+/* This styles the links inside the navigation bar */
+nav a {
+    color: #F3E8DD;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* This changes the navigation link color when the mouse is over it */
+nav a:hover {
+    color: #D9D9D9;
+}
+
+/*
+    This is the main Flexbox layout for the page.
+    The text and image are placed beside each other using display: flex.
+*/
+.content-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 30px 40px;
+}
+
+/* This allows the written content to use most of the available space */
+.about-content {
+    flex: 1;
+}
+
+/* This styles the paragraphs and makes them easier to read */
+.about-content p {
     font-family: Georgia, serif;
     line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
-/* This makes the links dark red so that they stand out against the nude background */
+/* This controls the area containing the LEGO Star Wars image */
+.image-section {
+    flex: 0 0 220px;
+}
+
+/* This makes the image fit inside its section without stretching */
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* This styles all regular links on the page */
 a {
     color: #8B1E2D;
 }
 
-/* This separates the contact section at the bottom from the main information above it */
+/* This separates the contact section from the main content */
 footer {
     border-top: 1px solid #111111;
-    margin-top: 40px;
-    padding-top: 20px;
+    margin: 10px 40px 0 40px;
+    padding: 20px 0 30px 0;
 }
 
-/* This controls the size of the image and places it on the top right side of the page */
-img {
-    width: 200px;
-    max-width: 28%;
-    float: right;
-    margin: 0 0 20px 30px;
+/* This keeps the footer paragraphs in the Georgia font */
+footer p {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+/*
+    This media query makes the layout work better on smaller screens.
+    The text and image will stack instead of being squeezed beside each other.
+*/
+@media (max-width: 700px) {
+    .content-layout {
+        flex-direction: column;
+    }
+
+    .image-section {
+        flex-basis: auto;
+        width: 200px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
 }
