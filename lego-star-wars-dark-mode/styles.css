@@ -1,0 +1,198 @@
+/*
+    This is the color palette I chose for my LEGO Star Wars Character Dictionary.
+    I chose a light nude background with black text and dark red accents.
+
+    Color Palette:
+    Light Nude: #F3E8DD
+    Black: #111111
+    Dark Red: #8B1E2D
+    Light Gray: #D9D9D9
+
+    Fonts:
+    Arial
+    Georgia
+    Impact
+*/
+
+/* CSS variables make it easier to change colors for the whole website. */
+:root {
+    --body-bg: #F3E8DD;
+    --text-color: var(--text-color);
+    --heading-color: var(--heading-color);
+    --nav-bg: #111111;
+    --nav-text: #F3E8DD;
+    --nav-hover: #D9D9D9;
+    --link-color: var(--heading-color);
+    --border-color: var(--text-color);
+}
+
+/* These variables replace the light colors when dark mode is selected. */
+body.dark_mode {
+    --body-bg: #171717;
+    --text-color: var(--nav-text);
+    --heading-color: #F0A7AF;
+    --nav-bg: #310E16;
+    --nav-text: #F3E8DD;
+    --nav-hover: #FFFFFF;
+    --link-color: #F0A7AF;
+    --border-color: var(--nav-hover);
+}
+
+/* This styles the entire page and removes the browser's default margin */
+body {
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* This gives the header spacing and uses dark red for the headings */
+header {
+    color: var(--heading-color);
+    padding: 30px 40px 20px 40px;
+}
+
+/* This gives the main website title a bold Star Wars-inspired appearance */
+header h1 {
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 36px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* This uses Flexbox to arrange the navigation links in a row */
+nav {
+    display: flex;
+    gap: 30px;
+    padding: 15px 40px;
+    background-color: var(--text-color);
+}
+
+/* This styles the links inside the navigation bar */
+nav a {
+    color: var(--nav-text);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* This changes the navigation link color when the mouse is over it */
+nav a:hover {
+    color: var(--nav-hover);
+}
+
+/*
+    This is the main Flexbox layout for the page.
+    The text and image are placed beside each other using display: flex.
+*/
+.content-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 30px 40px;
+}
+
+/* This allows the written content to use most of the available space */
+.about-content {
+    flex: 1;
+}
+
+/* This styles the paragraphs and makes them easier to read */
+.about-content p {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* This controls the area containing the LEGO Star Wars image */
+.image-section {
+    flex: 0 0 220px;
+}
+
+/* This makes the image fit inside its section without stretching */
+.image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* This styles all regular links on the page */
+a {
+    color: var(--link-color);
+}
+
+/* This separates the contact section from the main content */
+footer {
+    border-top: 1px solid var(--border-color);
+    margin: 10px 40px 0 40px;
+    padding: 20px 0 30px 0;
+}
+
+/* This keeps the footer paragraphs in the Georgia font */
+footer p {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+}
+
+/*
+    This media query makes the layout work better on smaller screens.
+    The text and image will stack instead of being squeezed beside each other.
+*/
+@media (max-width: 700px) {
+    .content-layout {
+        flex-direction: column;
+    }
+
+    .image-section {
+        flex-basis: auto;
+        width: 200px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+/* This styles the theme button inside the navigation bar. */
+#theme_toggler {
+    margin-left: auto;
+    padding: 8px 14px;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* This makes color changes smoother when switching themes. */
+body, header, nav, a, #theme_toggler {
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Makes the navigation text easier to read in light mode */
+nav a {
+    color: #111111;
+    font-weight: bold;
+}
+
+/* Makes the navigation text easier to read in dark mode */
+.dark_mode nav a {
+    color: #111111;
+}
+
+/* Makes the dark mode button easier to see */
+nav button {
+    color: #FFFFFF;
+    background-color: #8B1E2D;
+    border: 1px solid #111111;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Changes the button color when hovering over it */
+nav button:hover {
+    background-color: #651520;
+}
