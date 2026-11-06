@@ -1,0 +1,201 @@
+
+/* LEGO Star Wars Hub - Login and Registration Styling */
+
+/* Main website colors and font */
+body {
+    background-color: #111111;
+    color: #F3E8DD;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Main website heading */
+h1 {
+    color: #FFD700;
+    font-size: 38px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+/* Section headings */
+h2 {
+    color: #F3E8DD;
+    font-size: 26px;
+}
+
+/* Description text */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Login and registration form */
+form {
+    background-color: #222222;
+    border: 2px solid #FFD700;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 25px auto;
+    text-align: left;
+}
+
+/* Form field labels */
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Username, email, and password fields */
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Login and register buttons */
+button {
+    background-color: #FFD700;
+    color: #111111;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #E6C200;
+}
+
+/* Links between login and registration */
+a {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+/* Profile menu in the top-right corner */
+.profile-menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+}
+
+/* Username beside the profile picture */
+.profile-username {
+    color: #F3E8DD;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Clickable profile picture */
+.profile-dropdown {
+    position: relative;
+}
+
+.profile-dropdown summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.profile-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Circular profile picture placeholder */
+.profile-avatar {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    border: 2px solid #FFD700;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+/* Dropdown menu */
+.profile-dropdown-content {
+    position: absolute;
+    top: 52px;
+    right: 0;
+    min-width: 160px;
+    background-color: #222222;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Dropdown links */
+.profile-dropdown-content a {
+    display: block;
+    padding: 12px;
+    color: #F3E8DD;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.profile-dropdown-content a:hover {
+    background-color: #444444;
+    color: #FFD700;
+}
+
+/* Profile card */
+.profile-card {
+    background-color: #222222;
+    border: 2px solid #FFD700;
+    border-radius: 12px;
+    max-width: 400px;
+    padding: 30px;
+    margin: 25px auto;
+}
+
+/* Larger profile picture on profile page */
+.large-avatar {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+    border: 3px solid #FFD700;
+    border-radius: 50%;
+    font-size: 48px;
+}
+
+/* Adjusts profile menu for smaller screens */
+@media (max-width: 600px) {
+    .profile-menu {
+        top: 10px;
+        right: 12px;
+    }
+
+    .profile-username {
+        font-size: 12px;
+    }
+
+    main {
+        padding-top: 55px;
+    }
+}

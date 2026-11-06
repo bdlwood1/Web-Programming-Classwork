@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | LEGO Star Wars Hub</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <!-- Website heading -->
+    <h1>LEGO Star Wars Hub</h1>
+    <h2>Login to Your Account</h2>
+
+    <p>Welcome back! Enter your username and password.</p>
+
+    <!-- Sends login information to the Node.js server -->
+    <form action="/login" method="POST">
+
+        <!-- Username -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <!-- Login button -->
+        <button type="submit">Login</button>
+
+    </form>
+
+    <!-- Link to registration page -->
+    <p>Don't have an account?
+        <a href="/register.html">Register here</a>
+    </p>
+
+</body>
+</html>
